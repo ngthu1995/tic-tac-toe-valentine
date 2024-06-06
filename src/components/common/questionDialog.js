@@ -8,6 +8,7 @@ import {
   DialogContent,
   DialogTitle,
   Button,
+  Tooltip,
 } from "@material-ui/core";
 import Wheel from "./wheel";
 
@@ -35,9 +36,11 @@ const QuestionDialog = (props) => {
     >
       <DialogTitle id="max-width-dialog-title">{dialogState.title}</DialogTitle>
       <DialogContent>
-        <ListItem button onClick={() => setShowAnswer(!showAnswer)}>
-          <ListItemText primary={dialogState.content} />
-        </ListItem>
+        <Tooltip title={`${!showAnswer ? "Show" : "Hide"} answer`}>
+          <ListItem button onClick={() => setShowAnswer(!showAnswer)}>
+            <ListItemText primary={dialogState.content} />
+          </ListItem>
+        </Tooltip>
         {dialogState.img && (
           <img
             src={dialogState.img}
@@ -45,17 +48,19 @@ const QuestionDialog = (props) => {
             style={{ minWidth: 500, paddingLeft: 16, paddingRight: 16 }}
           />
         )}
-        <ListItem
-          button
-          onClick={() => setShowSpin(!showSpin)}
-          style={{ overflow: "auto" }}
-        >
-          <Collapse in={showAnswer} timeout="auto" unmountOnExit>
-            {(dialogState.answer || []).map((text, i) => {
-              return <ListItemText component="div" key={i} primary={text} />;
-            })}
-          </Collapse>
-        </ListItem>
+        <Tooltip title={`${!showSpin ? "Show" : "Hide"} spinning wheel`}>
+          <ListItem
+            button
+            onClick={() => setShowSpin(!showSpin)}
+            style={{ overflow: "auto" }}
+          >
+            <Collapse in={showAnswer} timeout="auto" unmountOnExit>
+              {(dialogState.answer || []).map((text, i) => {
+                return <ListItemText component="div" key={i} primary={text} />;
+              })}
+            </Collapse>
+          </ListItem>
+        </Tooltip>
         <ListItem style={{ justifyContent: "center" }}>
           <Collapse in={showSpin} timeout="auto" unmountOnExit>
             <Wheel

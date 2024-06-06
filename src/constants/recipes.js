@@ -11,8 +11,8 @@ export const recipes = [
   {
     id: 1,
     name: "Cupcakes 3",
-    //flour, butter, sugar, egg, milk
-    ingredients: [22, 11, 6, 5, 8],
+    //flour, butter, sugar
+    ingredients: [22, 11, 6],
     points: 3,
     uri: cupcake,
   },
@@ -28,7 +28,7 @@ export const recipes = [
     id: 3,
     name: "Spaghetti carbonara 3",
     // eggs, pasta, cheese, garlic, butter
-    ingredients: [5, 4, 21, 22, 17],
+    ingredients: [5, 4, 21],
     points: 3,
     uri: carbonara,
   },

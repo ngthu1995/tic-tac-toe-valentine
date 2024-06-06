@@ -118,7 +118,7 @@ const Home = (props) => {
                             (parseInt(boardState.numbercell) < 5 ||
                               parseInt(boardState.numbercell) > 20))
                         ) {
-                          alert("Invalid data!");
+                          alert("Please choose a number from 5 to 20!");
                           return;
                         }
                         setNumberCell(boardState.numbercell);
