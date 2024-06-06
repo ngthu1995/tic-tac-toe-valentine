@@ -147,7 +147,10 @@ const Home = (props) => {
                       <span>DRAW</span>
                     ) : null}
                   </p>
-                  <button onClick={() => resetMap()} className="btn btn-info">
+                  <button
+                    onClick={() => resetMap()}
+                    className="btn btn-info margin-bottom"
+                  >
                     Reset
                   </button>
                 </Grid>
