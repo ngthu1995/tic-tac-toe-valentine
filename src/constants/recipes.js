@@ -1,4 +1,3 @@
-import xLogo from "../img/x.png";
 import strawberries from "../img/food/strawberries.png";
 import carbonara from "../img/food/carbonara.png";
 import brulee from "../img/food/brulee.png";

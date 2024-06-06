@@ -28,7 +28,6 @@ export const data = [
 const Roulette = ({ currentPiece, handlePlayerItems }) => {
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
-  const [rouletteData, setRouletteData] = useState(data);
 
   const handleSpinClick = () => {
     if (!mustSpin) {
@@ -50,7 +49,7 @@ const Roulette = ({ currentPiece, handlePlayerItems }) => {
           mustStartSpinning={mustSpin}
           spinDuration={[0.2]}
           prizeNumber={prizeNumber}
-          data={rouletteData}
+          data={data}
           outerBorderColor={["#fddda2"]}
           outerBorderWidth={[9]}
           innerBorderColor={["#fddda2"]}

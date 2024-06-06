@@ -2,44 +2,8 @@ import { useState } from "react";
 import { pieces } from "../constants/action.types";
 import { isWinning } from "../algorithm/main";
 import { valentines, news, code } from "../questions";
-import { data as ingredients } from "../components/common/wheel";
-
-const usePlayers = () => {
-  const [player1, setPlayer1] = useState("");
-  const [player2, setPlayer2] = useState("");
-  const handleNameChange = (e) => (type) => {
-    if (type === "player1") {
-      setPlayer1(e.target.value);
-    } else if (type === "player2") {
-      setPlayer2(e.target.value);
-    }
-  };
-  return {
-    player1,
-    player2,
-    handleNameChange,
-  };
-};
-
-export const usePlayerItems = (props) => {
-  const [player1Items, setPlayer1Items] = useState([]);
-  const [player2Items, setPlayer2Items] = useState([]);
-  // const [player1Items, setPlayer1Items] = useState(ingredients.slice(0, 2));
-  // const [player2Items, setPlayer2Items] = useState(ingredients.slice(0, 8));
-
-  const handlePlayerItems = ({ player, item }) => {
-    const fn = player === "player1" ? setPlayer1Items : setPlayer2Items;
-    const items = player === "player1" ? player1Items : player2Items;
-
-    fn([...items, item]);
-  };
-
-  return {
-    player1Items,
-    player2Items,
-    handlePlayerItems,
-  };
-};
+import { usePlayers } from "./usePlayers";
+import { usePlayerItems } from "./usePlayerItems";
 
 export const useHomePage = () => {
   const [numberCell, setNumberCell] = useState(null);
@@ -51,11 +15,15 @@ export const useHomePage = () => {
     content: "",
     currentPiece: "X",
   });
+  const [count, setCount] = useState(0);
+  const [isWin, setWin] = useState(-1);
+  const [piecesWin, setPiecesWin] = useState(null);
+  const [haveIt, setHaveIt] = useState([]);
 
   const { player1Items, player2Items, handlePlayerItems } = usePlayerItems();
 
   const { player1, player2, handleNameChange } = usePlayers();
-  console.log({ player1, player2 });
+
   const onSetNumberCell = (numberCell) => {
     setNumberCell(parseInt(numberCell));
   };
@@ -72,19 +40,11 @@ export const useHomePage = () => {
     setCurrentPiece(data);
   };
 
-  const [count, setCount] = useState(0);
-  const [isWin, setWin] = useState(-1);
-  const [piecesWin, setPiecesWin] = useState(null);
-
-  const [haveIt, setHaveIt] = useState([]);
-  console.log("🚀 ~ useHomePage ~ haveIt:", haveIt);
-
-  function generateUniqueRandom(maxNr) {
+  const generateUniqueRandom = (maxNr) => {
     //Generate random number
     // //Coerce to number by boxing
     let random = (Math.random() * maxNr).toFixed();
     random = Number(random);
-    console.log("🚀 ~ generateUniqueRandom ~ random:", random);
 
     if (!haveIt.includes(random)) {
       setHaveIt([...haveIt, random]);
@@ -94,11 +54,10 @@ export const useHomePage = () => {
         //Recursively generate number
         return generateUniqueRandom(maxNr);
       } else {
-        console.log("No more questions available.");
         return null;
       }
     }
-  }
+  };
 
   const handleDialog = ({ open, title, currentPiece }) => {
     if (open) {

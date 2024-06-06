@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import {
-  TextField,
   Grid,
   Typography,
   Divider,
-  ListItem,
-  ListItemText,
   Dialog,
   DialogActions,
   DialogContent,
@@ -32,7 +29,6 @@ const calculatePoints = ({ playerItems = [], recipes = [] }) => {
         )
       : false;
     if (canHaveRecipe) {
-      console.log("🚀 ~ recipes.forEach ~ recipePoint:", recipePoint);
       points += recipePoint;
     }
   });
@@ -44,17 +40,14 @@ const OverviewDialog = (props) => {
   const {
     dialogState = {},
     handleDialog,
-    showAnswer,
     setShowSpin,
     setShowAnswer,
-    showSpin,
-    handlePlayerItems,
     player1Items,
     player2Items,
     player1,
     player2,
   } = props;
-  console.log("🚀 ~ OverviewDialog ~ player1Items:", player1Items);
+
   return (
     <Dialog
       fullWidth
@@ -84,7 +77,7 @@ const OverviewDialog = (props) => {
               </Typography>
             </DialogContentText>
             <Grid container spacing={2}>
-              {player1Items.map((item, i) => {
+              {player1Items.map((item) => {
                 const { option } = item;
                 return <Grid item>{option}</Grid>;
               })}
@@ -102,7 +95,7 @@ const OverviewDialog = (props) => {
               </Typography>
             </DialogContentText>
             <Grid container spacing={2}>
-              {player2Items.map((item, i) => {
+              {player2Items.map((item) => {
                 const { option } = item;
                 return <Grid item>{option}</Grid>;
               })}
