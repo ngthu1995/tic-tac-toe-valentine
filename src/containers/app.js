@@ -1,14 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import HomeContainer from "../components/Home";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route exact path="/" component={() => <HomeContainer />} />
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
