@@ -1,7 +1,7 @@
 {
   "name": "game-caro-tic-tac-toe",
   "version": "0.1.0",
-  "homepage": "https://github.com/ngthu1995/tic-tac-toe-valentine",
+  "homepage": "https://ngthu1995.github.io/tic-tac-toe-valentine",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
