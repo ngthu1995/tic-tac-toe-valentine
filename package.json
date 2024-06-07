@@ -1,10 +1,12 @@
 {
   "name": "game-caro-tic-tac-toe",
   "version": "0.1.0",
+  "homepage": "https://github.com/ngthu1995/tic-tac-toe-valentine",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
+    "gh-pages": "^6.1.1",
     "lodash": "^4.17.21",
     "react": "^16.6.3",
     "react-bootstrap": "^0.32.4",
@@ -21,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
