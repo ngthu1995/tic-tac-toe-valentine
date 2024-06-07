@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1458718ea91661e94f4b",
-    "url": "/tic-tac-toe-valentine/static/js/main.1458718e.chunk.js"
+    "revision": "7a2f5632dcf7c04a5d1d",
+    "url": "/tic-tac-toe-valentine/static/js/main.7a2f5632.chunk.js"
   },
   {
-    "revision": "79dfb14461efeed22306",
-    "url": "/tic-tac-toe-valentine/static/js/1.79dfb144.chunk.js"
+    "revision": "5c74e5305c9aabc36b71",
+    "url": "/tic-tac-toe-valentine/static/js/1.5c74e530.chunk.js"
   },
   {
     "revision": "ab22ae01268de442d67b",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/tic-tac-toe-valentine/static/media/cupcake.294c6ca2.png"
   },
   {
-    "revision": "e49f00baea8ef171ccc961977360ba66",
+    "revision": "185938a272bfc3d1ce089df280a1102c",
     "url": "/tic-tac-toe-valentine/index.html"
   }
 ];

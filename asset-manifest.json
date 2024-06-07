@@ -1,8 +1,8 @@
 {
-  "main.js": "/tic-tac-toe-valentine/static/js/main.1458718e.chunk.js",
-  "main.js.map": "/tic-tac-toe-valentine/static/js/main.1458718e.chunk.js.map",
-  "static/js/1.79dfb144.chunk.js": "/tic-tac-toe-valentine/static/js/1.79dfb144.chunk.js",
-  "static/js/1.79dfb144.chunk.js.map": "/tic-tac-toe-valentine/static/js/1.79dfb144.chunk.js.map",
+  "main.js": "/tic-tac-toe-valentine/static/js/main.7a2f5632.chunk.js",
+  "main.js.map": "/tic-tac-toe-valentine/static/js/main.7a2f5632.chunk.js.map",
+  "static/js/1.5c74e530.chunk.js": "/tic-tac-toe-valentine/static/js/1.5c74e530.chunk.js",
+  "static/js/1.5c74e530.chunk.js.map": "/tic-tac-toe-valentine/static/js/1.5c74e530.chunk.js.map",
   "runtime~main.js": "/tic-tac-toe-valentine/static/js/runtime~main.ab22ae01.js",
   "runtime~main.js.map": "/tic-tac-toe-valentine/static/js/runtime~main.ab22ae01.js.map",
   "static/media/heart.png": "/tic-tac-toe-valentine/static/media/heart.29a2a294.png",
@@ -25,6 +25,6 @@
   "static/media/steak.png": "/tic-tac-toe-valentine/static/media/steak.644bf9bd.png",
   "static/media/cupcake.png": "/tic-tac-toe-valentine/static/media/cupcake.294c6ca2.png",
   "index.html": "/tic-tac-toe-valentine/index.html",
-  "precache-manifest.d7acf6d20b8baacad2192b91b375b4d8.js": "/tic-tac-toe-valentine/precache-manifest.d7acf6d20b8baacad2192b91b375b4d8.js",
+  "precache-manifest.81a909b3bf1582af088131d8ab071436.js": "/tic-tac-toe-valentine/precache-manifest.81a909b3bf1582af088131d8ab071436.js",
   "service-worker.js": "/tic-tac-toe-valentine/service-worker.js"
 }
